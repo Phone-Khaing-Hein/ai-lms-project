@@ -12,4 +12,9 @@ public class TeacherHomeController {
     public String home(){
         return "TCH01";
     }
+
+    @GetMapping("/chat")
+    public String chat(){
+        return "TCH02";
+    }
 }
