@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <body>
 <header th:fragment="navigation">
     <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm bg-light fixed-top">
@@ -23,7 +23,12 @@
                 <li class="nav-item"><a href="chat.html" class="nav-link text-uppercase">Chat</a>
                 </li>
             </ul>
-            <a th:href="@{/login}" class="btn btn-outline-danger btn-sm text-capitalize mx-3">logout</a>
+            <div sec:authorize="isAuthenticated()">
+                <a href="javascript: document.logoutForm.submit()" class="me-2 btn btn-outline-danger btn-sm">Log Out</a>
+                <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                    <input hidden type="submit" value="Sign Out">
+                </form>
+            </div>
         </div>
     </nav>
 </header>

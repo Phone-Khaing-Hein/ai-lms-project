@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<section th:fragment="exam-table">
+    <div class="container">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-end">
+            <ol class="breadcrumb text-capitalize">
+                <li class="breadcrumb-item"><a th:href="@{/home}">dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">exam-list</li>
+            </ol>
+        </nav>
+        <table class="table mb-0">
+            <thead>
+            <tr>
+                <th scope="col">Post Date</th>
+                <th scope="col">Task</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-capitalize">
+                <td>
+                    <span>May Zwei•Jul 8</span>
+                </td>
+                <td class="align-middle">
+                    <span>Student Management System Assignment with SpringDataJPA</span>
+                </td>
+                <td class="align-middle">
+                    <h6 class="mb-0"><span class="badge bg-primary">Due Jul 7, 6:29 PM</span></h6>
+                </td>
+                <td class="align-middle">
+                    <a href="assignment-view.html" class="text-decoration-none">view assignment</a>
+                </td>
+            </tr>
+            <tr class="text-capitalize">
+                <td>
+                            <span>May Zwei
+                                •
+                                Jun 17</span>
+                </td>
+                <td class="align-middle">
+                    <span>Student Management System Assignment with Database</span>
+                </td>
+                <td class="align-middle">
+                    <h6 class="mb-0"><span class="badge bg-success">Due Jun 20, 6:29 PM</span></h6>
+                </td>
+                <td class="align-middle">
+                    <a th:href="@{/exam/exam-form}" class="text-decoration-none">view exam</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>

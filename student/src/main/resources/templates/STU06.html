@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layouts/LY01 :: layout(~{::main})}">
 <body>
-
+<main role="main">
+    <div th:replace="fragments/AMF01 :: assignment-view"></div>
+</main>
 </body>
 </html>
