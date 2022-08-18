@@ -1,4 +1,4 @@
-package com.example.admin.controller;
+package com.ace.lms.admin.controller;
 
 public class AdminHomeController {
 }

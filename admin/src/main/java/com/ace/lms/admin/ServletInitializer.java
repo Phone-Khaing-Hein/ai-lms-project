@@ -1,4 +1,4 @@
-package com.example.admin;
+package com.ace.lms.admin;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
