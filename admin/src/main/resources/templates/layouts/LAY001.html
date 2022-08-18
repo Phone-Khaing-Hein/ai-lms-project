@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="layout(content)" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/HEAD01 :: head"></head>
+<body>
+<header th:replace="fragments/NAV001 :: navigation"></header>
+    <main th:replace="${content}"></main>
+</div>
+</body>
+</html>
